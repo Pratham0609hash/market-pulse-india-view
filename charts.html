@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Charts - StockPulse</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/recharts@2/dist/recharts.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header/Navigation -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo">StockPulse</a>
+                        <span class="badge">India</span>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="search.html" class="nav-link">Search</a>
+                        <a href="charts.html" class="nav-link active">Charts</a>
+                        <a href="analysis.html" class="nav-link">Analysis</a>
+                        <a href="news.html" class="nav-link">News</a>
+                    </nav>
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Stock Charts</h1>
+                    <p class="text-muted">Visualize stock price movements and trade volumes</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 stock-selection">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Select Stock</h2>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="symbol">Stock Symbol</label>
+                                <div class="select-container">
+                                    <select id="symbol" class="form-control select">
+                                        <option value="RELIANCE">RELIANCE</option>
+                                        <option value="TCS">TCS</option>
+                                        <option value="HDFCBANK">HDFCBANK</option>
+                                        <option value="INFY">INFY</option>
+                                        <option value="SBIN">SBIN</option>
+                                        <option value="BHARTIARTL">BHARTIARTL</option>
+                                        <option value="HINDUNILVR">HINDUNILVR</option>
+                                        <option value="ICICIBANK">ICICIBANK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="exchange">Exchange</label>
+                                <div class="select-container">
+                                    <select id="exchange" class="form-control select">
+                                        <option value="NSE">NSE</option>
+                                        <option value="BSE">BSE</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="chartType">Chart Type</label>
+                                <div class="select-container">
+                                    <select id="chartType" class="form-control select">
+                                        <option value="line">Line Chart</option>
+                                        <option value="area">Area Chart</option>
+                                        <option value="candle">Candlestick Chart</option>
+                                        <option value="bar">Bar Chart</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <a href="analysis.html" class="btn btn-primary btn-block">View Technical Analysis</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card stock-info-card">
+                        <div class="card-body">
+                            <div id="stockInfo">
+                                <!-- Stock info will be loaded here -->
+                                <div class="loading-spinner">
+                                    <div class="spinner"></div>
+                                    <p>Loading stock data...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card chart-card">
+                    <div class="card-body">
+                        <div class="chart-header">
+                            <h2>Price Chart</h2>
+                            <div class="timeframe-selector">
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="1d">1D</button>
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="1w">1W</button>
+                                <button class="btn btn-outline timeframe-btn active" data-timeframe="1mo">1M</button>
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="3mo">3M</button>
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="6mo">6M</button>
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="1y">1Y</button>
+                                <button class="btn btn-outline timeframe-btn" data-timeframe="5y">5Y</button>
+                            </div>
+                        </div>
+                        
+                        <div id="priceChart" class="chart-container">
+                            <!-- Chart will be rendered here -->
+                            <div class="loading-spinner">
+                                <div class="spinner"></div>
+                                <p>Loading chart data...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card volume-chart-card">
+                    <div class="card-body">
+                        <h2>Volume Chart</h2>
+                        <div id="volumeChart" class="chart-container">
+                            <!-- Volume chart will be rendered here -->
+                            <div class="loading-spinner">
+                                <div class="spinner"></div>
+                                <p>Loading volume data...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="related-actions">
+                    <a href="analysis.html" class="btn btn-primary">Technical Analysis</a>
+                    <a href="news.html" class="btn btn-outline">Latest News</a>
+                    <a href="search.html" class="btn btn-outline">Search Other Stocks</a>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>© 2025 StockPulse. All rights reserved.</p>
+                    <p>Data provided for informational purposes only. Not intended for trading purposes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/pages/charts.js"></script>
+</body>
+</html>

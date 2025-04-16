@@ -1,26 +1,245 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>market-pulse-india-view</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockPulse - Indian Stock Market Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header/Navigation -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo">StockPulse</a>
+                        <span class="badge">India</span>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="search.html" class="nav-link">Search</a>
+                        <a href="charts.html" class="nav-link">Charts</a>
+                        <a href="analysis.html" class="nav-link">Analysis</a>
+                        <a href="news.html" class="nav-link">News</a>
+                    </nav>
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <meta property="og:title" content="market-pulse-india-view" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Make smarter investment decisions with StockPulse</h1>
+                    <p class="hero-subtitle">
+                        Analyze, track, and visualize Indian stocks from BSE and NSE with powerful charts and technical indicators
+                    </p>
+                    <div class="hero-cta">
+                        <a href="search.html" class="btn btn-primary btn-lg">Start Exploring</a>
+                        <a href="signup.html" class="btn btn-outline btn-lg">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Powerful Stock Market Analysis</h2>
+                <p class="section-subtitle">Everything you need to analyze Indian stocks in one place</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Interactive Charts</h3>
+                        <p>Visualize stock price movements with multiple chart types and timeframes</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Technical Analysis</h3>
+                        <p>Utilize key indicators like Moving Averages, RSI, MACD, and Bollinger Bands</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Stock Screener</h3>
+                        <p>Find potential investments using customizable filters and criteria</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📰</div>
+                        <h3>Market News</h3>
+                        <p>Stay updated with the latest news and events affecting your portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <!-- Market Overview -->
+        <section class="market-overview">
+            <div class="container">
+                <h2 class="section-title">Market Overview</h2>
+                <div class="market-indices">
+                    <div class="index-card">
+                        <h3>NIFTY 50</h3>
+                        <div class="index-price">21,870.65</div>
+                        <div class="index-change positive">+143.2 (+0.66%)</div>
+                    </div>
+                    <div class="index-card">
+                        <h3>SENSEX</h3>
+                        <div class="index-price">72,035.77</div>
+                        <div class="index-change positive">+423.95 (+0.59%)</div>
+                    </div>
+                    <div class="index-card">
+                        <h3>NIFTY BANK</h3>
+                        <div class="index-price">46,387.20</div>
+                        <div class="index-change negative">-178.55 (-0.38%)</div>
+                    </div>
+                    <div class="index-card">
+                        <h3>NIFTY IT</h3>
+                        <div class="index-price">35,276.80</div>
+                        <div class="index-change positive">+265.30 (+0.76%)</div>
+                    </div>
+                </div>
+                
+                <div class="top-movers">
+                    <div class="movers-section">
+                        <h3>Top Gainers</h3>
+                        <ul class="movers-list">
+                            <li class="mover-item">
+                                <span class="mover-symbol">ADANIPORTS</span>
+                                <span class="mover-price">₹1,134.50</span>
+                                <span class="mover-change positive">+4.35%</span>
+                            </li>
+                            <li class="mover-item">
+                                <span class="mover-symbol">BAJAJFINSV</span>
+                                <span class="mover-price">₹1,634.25</span>
+                                <span class="mover-change positive">+3.72%</span>
+                            </li>
+                            <li class="mover-item">
+                                <span class="mover-symbol">TATASTEEL</span>
+                                <span class="mover-price">₹143.70</span>
+                                <span class="mover-change positive">+2.91%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movers-section">
+                        <h3>Top Losers</h3>
+                        <ul class="movers-list">
+                            <li class="mover-item">
+                                <span class="mover-symbol">MARUTI</span>
+                                <span class="mover-price">₹10,234.75</span>
+                                <span class="mover-change negative">-1.87%</span>
+                            </li>
+                            <li class="mover-item">
+                                <span class="mover-symbol">COALINDIA</span>
+                                <span class="mover-price">₹425.60</span>
+                                <span class="mover-change negative">-1.35%</span>
+                            </li>
+                            <li class="mover-item">
+                                <span class="mover-symbol">HDFCBANK</span>
+                                <span class="mover-price">₹1,542.20</span>
+                                <span class="mover-change negative">-1.12%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Stocks -->
+        <section class="popular-stocks">
+            <div class="container">
+                <h2 class="section-title">Popular Stocks</h2>
+                <div class="stock-grid">
+                    <a href="charts.html?symbol=RELIANCE" class="stock-card">
+                        <div class="stock-details">
+                            <div class="stock-name">
+                                <h3>Reliance Industries</h3>
+                                <span class="stock-symbol">RELIANCE</span>
+                            </div>
+                            <div class="stock-metrics">
+                                <div class="stock-price">₹2,550.75</div>
+                                <div class="stock-change positive">+45.25 (+1.8%)</div>
+                            </div>
+                        </div>
+                        <div class="stock-chart-preview"></div>
+                    </a>
+                    <a href="charts.html?symbol=TCS" class="stock-card">
+                        <div class="stock-details">
+                            <div class="stock-name">
+                                <h3>Tata Consultancy Services</h3>
+                                <span class="stock-symbol">TCS</span>
+                            </div>
+                            <div class="stock-metrics">
+                                <div class="stock-price">₹3,450.20</div>
+                                <div class="stock-change negative">-12.35 (-0.36%)</div>
+                            </div>
+                        </div>
+                        <div class="stock-chart-preview"></div>
+                    </a>
+                    <a href="charts.html?symbol=INFY" class="stock-card">
+                        <div class="stock-details">
+                            <div class="stock-name">
+                                <h3>Infosys</h3>
+                                <span class="stock-symbol">INFY</span>
+                            </div>
+                            <div class="stock-metrics">
+                                <div class="stock-price">₹1,456.10</div>
+                                <div class="stock-change negative">-3.45 (-0.24%)</div>
+                            </div>
+                        </div>
+                        <div class="stock-chart-preview"></div>
+                    </a>
+                    <a href="charts.html?symbol=HDFCBANK" class="stock-card">
+                        <div class="stock-details">
+                            <div class="stock-name">
+                                <h3>HDFC Bank</h3>
+                                <span class="stock-symbol">HDFCBANK</span>
+                            </div>
+                            <div class="stock-metrics">
+                                <div class="stock-price">₹1,623.50</div>
+                                <div class="stock-change positive">+12.75 (+0.79%)</div>
+                            </div>
+                        </div>
+                        <div class="stock-chart-preview"></div>
+                    </a>
+                </div>
+                <div class="view-more">
+                    <a href="search.html" class="btn btn-outline">View More Stocks</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to level up your stock market analysis?</h2>
+                    <p>Create a free account to access all features and start tracking your favorite stocks today.</p>
+                    <a href="signup.html" class="btn btn-primary btn-lg">Sign Up Now</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>© 2025 StockPulse. All rights reserved.</p>
+                    <p>Data provided for informational purposes only. Not intended for trading purposes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/pages/index.js"></script>
+</body>
 </html>

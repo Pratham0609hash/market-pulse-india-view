@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
 
-## Project info
+# StockPulse - Indian Stock Market Analysis
 
-**URL**: https://lovable.dev/projects/f0e4e1e4-7ce7-425c-8b84-f3986ccce485
+StockPulse is a web application for analyzing Indian stocks from BSE and NSE exchanges. It provides charts, technical analysis, news, and search functionality for stock market enthusiasts.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Interactive stock charts (line, area, bar charts)
+- Technical analysis with indicators (moving averages, RSI, MACD, Bollinger Bands)
+- Stock search functionality
+- News and updates for selected stocks
+- User authentication (login/signup)
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0e4e1e4-7ce7-425c-8b84-f3986ccce485) and start prompting.
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python/Flask
+- **Charts**: D3.js
+- **Data**: Mock data (simulated stock prices and technical indicators)
 
-Changes made via Lovable will be committed automatically to this repo.
+## Setup Instructions
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Python 3.7 or higher
+- pip (Python package installer)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/stockpulse.git
+   cd stockpulse
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install Python dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Start the Flask server:
+   ```
+   python server.py
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Development
+
+For development purposes, you might want to run the Flask server with debug mode enabled:
+
+```
+python server.py
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `index.html` - Main page
+- `charts.html` - Stock charts page
+- `analysis.html` - Technical analysis page
+- `news.html` - Stock news page
+- `search.html` - Stock search page
+- `login.html` - User login page
+- `signup.html` - User registration page
+- `css/` - CSS stylesheets
+- `js/` - JavaScript files
+  - `utils.js` - Utility functions
+  - `pages/` - Page-specific JavaScript
+- `server.py` - Python/Flask backend
 
-**Use GitHub Codespaces**
+## API Endpoints
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `/api/stock/<symbol>` - Get basic stock information
+- `/api/historical/<symbol>?timeframe=1mo` - Get historical price data
+- `/api/search?q=<query>` - Search for stocks
+- `/api/news/<symbol>` - Get news for a specific stock
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Disclaimer
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f0e4e1e4-7ce7-425c-8b84-f3986ccce485) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This application uses simulated data for educational purposes. It is not meant for actual trading decisions. Always consult a financial advisor before making investment decisions.
